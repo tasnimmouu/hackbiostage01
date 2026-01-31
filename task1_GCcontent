@@ -1,0 +1,6 @@
+gc_content <- function(sequence) {
+  sequence <- toupper(sequence)
+  letters <- strsplit(sequence, "")[[1]]
+  gc_count <- sum(letters == "G" | letters == "C")
+  (gc_count / length(letters)) * 100
+}
